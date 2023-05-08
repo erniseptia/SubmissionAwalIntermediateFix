@@ -32,6 +32,7 @@
         tools:text="@string/username" />
 
     <ImageView
+        android:contentDescription="@string/description"
         android:transitionName="image"
         android:id="@+id/iv_detail_photo"
         android:layout_width="match_parent"

@@ -2,9 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <group android:menuCategory="container">
     <item
         android:id="@+id/logout"
         android:title="@string/logout"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/maps"
+        android:title="@string/maps"
+        android:icon="@drawable/ic_baseline_map_24"
+        app:showAsAction="always"/>
+    </group>
 
 </menu>

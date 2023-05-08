@@ -11,7 +11,13 @@ data class Stories(
     val error: Boolean,
 
     @field:SerializedName("message")
-    val message: String
+    val message: String,
+
+    @field:SerializedName("title")
+    val title: String,
+
+    @field:SerializedName("location")
+    val location: Location
 )
 
 data class ListStoryItem(
@@ -37,3 +43,11 @@ data class ListStoryItem(
     @field:SerializedName("lat")
     val lat: Any
 )
+
+data class Location(
+    @field:SerializedName("latitude")
+    val latitude: Double,
+    @field:SerializedName("longtitude")
+    val longitude: Double
+)
+

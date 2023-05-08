@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.view.*
 import androidx.appcompat.app.AlertDialog
 import androidx.datastore.core.DataStore
@@ -16,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import app.story.mystoryappneww.R
 import app.story.mystoryappneww.databinding.ActivityMainBinding
 import app.story.mystoryappneww.login.LoginActivity
+import app.story.mystoryappneww.maps.MapsActivity
 import app.story.mystoryappneww.newstory.NewStoryActivity
 import app.story.mystoryappneww.utils.UserPreference
 import app.story.mystoryappneww.utils.ViewModelFactory
@@ -113,7 +113,14 @@ class MainActivity : AppCompatActivity() {
                     show()
                 }
             }
-        }
-        return super.onOptionsItemSelected(item)
+            R.id.maps -> {
+                val intent = Intent(this@MainActivity, MapsActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+       }
+       return super.onOptionsItemSelected(item)
     }
 }
+
+

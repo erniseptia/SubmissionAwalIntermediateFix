@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import app.story.mystoryappneww.R
 import app.story.mystoryappneww.databinding.ActivityDetailBinding
 import com.bumptech.glide.Glide
 

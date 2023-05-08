@@ -4,11 +4,11 @@
     package="app.story.mystoryappneww">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-feature android:name="android.hardware.camera" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
@@ -23,6 +23,8 @@
         </intent>
     </queries>
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -33,6 +35,13 @@
         android:theme="@style/Theme.MyStoryAppNeww"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBf-P_4QolQu8ND6X-G4WuWTtr9MD48E98" />
+
+        <activity
+            android:name=".maps.MapsActivity"
+            android:exported="false" />
         <activity
             android:name=".newstory.NewStoryActivity"
             android:exported="false" />
@@ -50,10 +59,10 @@
             android:exported="false" />
         <activity
             android:name=".main.MainActivity"
-            android:exported="true"/>
-            <activity
-                android:name=".splahscreen.SplashActivity"
-                android:exported="true" >
+            android:exported="true" />
+        <activity
+            android:name=".splahscreen.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -12,6 +12,8 @@ import app.story.mystoryappneww.dataclass.ListStoryItem
 import app.story.mystoryappneww.detail.Detail
 import app.story.mystoryappneww.response.withDateFormat
 import com.bumptech.glide.Glide
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 class StoryAdapter(private val listStories: List<ListStoryItem>):
     RecyclerView.Adapter<StoryAdapter.ListViewHolder>() {
@@ -58,4 +60,5 @@ class StoryAdapter(private val listStories: List<ListStoryItem>):
             }
         }
     }
+
 }

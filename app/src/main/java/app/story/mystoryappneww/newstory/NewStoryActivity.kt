@@ -48,13 +48,6 @@ class NewStoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewStoryBinding
     private lateinit var newStoryViewModel: NewStoryViewModel
 
-    companion object {
-        const val CAMERA_X_RESULT = 200
-
-        private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
-        private const val REQUEST_CODE_PERMISSIONS = 10
-    }
-
     override fun onRequestPermissionsResult(
         requestCode: Int, permissions: Array<String>, grantResults: IntArray
     ) {
@@ -225,5 +218,12 @@ class NewStoryActivity : AppCompatActivity() {
                 binding.previewImageView.setImageURI(uri)
             }
         }
+    }
+
+    companion object {
+        const val CAMERA_X_RESULT = 200
+
+        private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
+        private const val REQUEST_CODE_PERMISSIONS = 10
     }
 }
