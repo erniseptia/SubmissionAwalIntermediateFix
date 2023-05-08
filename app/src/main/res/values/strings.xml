@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Story App</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="created_at" translatable="false">Created at</string>
+    <string name="invalid_email" translatable="false">Invalid Email</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="invalid_password" translatable="false">Invalid Password</string>
+    <string name="name" translatable="false">Nama</string>
+    <string name="tittle_login" translatable="false">Please Login</string>
+    <string name="dont_have_account" translatable="false">Dont Have Account? Register</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="copyright" translatable="false">2023-MyStoryApp</string>
+    <string name="empty_email" translatable="false">Enter Email</string>
+    <string name="empty_password" translatable="false">Enter Password</string>
+    <string name="have_account" translatable="false">Have Account? Login</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="title_signup" translatable="false">Please Sign Up</string>
+    <string name="empty_name" translatable="false">Enter Name</string>
+    <string name="description" translatable="false"> Description</string>
+    <string name="failed_capture" translatable="false">Failed Capture</string>
+    <string name="failed_open_camera" translatable="false">Failed Open Camera</string>
+    <string name="camera" translatable="false">Camera</string>
+    <string name="gallery" translatable="false">Gallery</string>
+    <string name="upload" translatable="false"> Upload</string>
+    <string name="empty_description" translatable="false">Enter Description</string>
+    <string name="empty_img" translatable="false"> Enter Image</string>
+    <string name="not_permission" translatable="false"> Don\'t have permission</string>
+    <string name="logout" translatable="false">Logout</string>
+    <string name="logout_validation" translatable="false">Are sure you want to logout?</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="title" translatable="false">WELCOME TO MY STORY APP</string>
+</resources>
