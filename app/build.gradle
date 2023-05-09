@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -86,4 +88,13 @@ dependencies {
 
     //gson
     implementation 'com.google.code.gson:gson:2.9.0'
+
+    //paging
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+    implementation 'androidx.paging:paging-common-ktx:3.1.1'
+    implementation 'androidx.room:room-paging:2.6.0-alpha01'
+
+    //room
+    implementation 'androidx.room:room-ktx:2.6.0-alpha01'
+    kapt 'androidx.room:room-compiler:2.6.0-alpha01'
 }

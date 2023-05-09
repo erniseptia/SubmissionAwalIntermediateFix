@@ -2,20 +2,23 @@ package app.story.mystoryappneww.main
 
 import android.util.Log
 import androidx.lifecycle.*
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import app.story.mystoryappneww.api.ApiConfig
 import app.story.mystoryappneww.dataclass.ListStoryItem
 import app.story.mystoryappneww.dataclass.LoginResult
 import app.story.mystoryappneww.dataclass.Stories
+import app.story.mystoryappneww.repository.StoryRepository
 import app.story.mystoryappneww.utils.UserPreference
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainViewModel(private val pref: UserPreference) : ViewModel() {
+class MainViewModel(private val pref: UserPreference, storyRepository: StoryRepository) : ViewModel() {
 
     private val _stories = MutableLiveData<List<ListStoryItem>>()
-    val stories: LiveData<List<ListStoryItem>> = _stories
+    val stories: LiveData<PagingData<Stories>> =   storyRepository.getStory().cachedIn(viewModelScope)
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
@@ -48,6 +51,7 @@ class MainViewModel(private val pref: UserPreference) : ViewModel() {
                 Log.e(TAG, "onFailure: ${t.message}")
             }
         })
+
     }
 
     fun getUser(): LiveData<LoginResult> {

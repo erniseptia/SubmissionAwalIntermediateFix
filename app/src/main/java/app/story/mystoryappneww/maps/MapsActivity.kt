@@ -36,7 +36,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Mendapatkan data cerita yang memiliki lokasi
-        val url = "https://story-api.dicoding.dev/v1/stories?location=id"
+        val url = "https://story-api.dicoding.dev/v1/stories?location=1"
         val request = Request.Builder().url(url).build()
         val client = OkHttpClient()
 
