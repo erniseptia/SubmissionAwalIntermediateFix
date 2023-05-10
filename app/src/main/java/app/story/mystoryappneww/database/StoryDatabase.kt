@@ -13,6 +13,8 @@ import app.story.mystoryappneww.dataclass.ListStoryItem
 )
 abstract class StoryDatabase: RoomDatabase() {
 
+    abstract fun storyDao(): StoryDao
+
     companion object {
         @Volatile
         private var INSTANCE: StoryDatabase? = null
